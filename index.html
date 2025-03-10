@@ -6,34 +6,55 @@
     <title>MewToken - Token Oficial</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #1a1a1a;
+            color: white;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 50px auto;
-            background: white;
-            padding: 20px;
+            background: #222;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         }
         img {
-            width: 100px;
+            width: 120px;
         }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
+        h1 {
+            color: #ffcc00;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: black;
+            padding: 12px 20px;
             font-size: 16px;
-            cursor: pointer;
             border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
         }
-        button:hover {
-            background-color: #0056b3;
+        .button:hover {
+            background-color: #e6b800;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -42,7 +63,14 @@
         <img src="https://raw.githubusercontent.com/Christobulo2810/MewToken/main/MewLogo.png" alt="MewToken Logo">
         <h1>MewToken</h1>
         <p>El token oficial de la comunidad Mew. Úsalo para transacciones, intercambios y más.</p>
-        <button onclick="addToMetaMask()">Agregar a MetaMask</button>
+        <a href="#" class="button" onclick="addToMetaMask()">Agregar a MetaMask</a>
+        
+        <div class="links">
+            <p><strong>Enlaces útiles:</strong></p>
+            <a href="https://buidlbear.com/tx/0xd9145CCE52D386f254917e481eB44e9943F39138" target="_blank">Ver contrato</a>
+            <a href="https://twitter.com/MewToken" target="_blank">Twitter</a>
+            <a href="https://t.me/MewToken" target="_blank">Telegram</a>
+        </div>
     </div>
     
     <script>
