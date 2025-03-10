@@ -5,56 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MewToken - Token Oficial</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            background-color: #1a1a1a;
+            background: linear-gradient(135deg, #f8a8ff, #d67aff);
             color: white;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 50px auto;
-            background: #222;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
         img {
             width: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
         h1 {
-            color: #ffcc00;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 15px 0;
         }
         p {
             font-size: 18px;
             margin-bottom: 20px;
         }
-        .button {
-            display: inline-block;
-            background-color: #ffcc00;
-            color: black;
-            padding: 12px 20px;
+        .btn {
+            background-color: #ff66c4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
             font-size: 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 102, 196, 0.5);
         }
-        .button:hover {
-            background-color: #e6b800;
-        }
-        .links {
-            margin-top: 20px;
-        }
-        .links a {
-            color: #ffcc00;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-        .links a:hover {
-            text-decoration: underline;
+        .btn:hover {
+            background-color: #ff33aa;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -62,15 +60,8 @@
     <div class="container">
         <img src="https://raw.githubusercontent.com/Christobulo2810/MewToken/main/MewLogo.png" alt="MewToken Logo">
         <h1>MewToken</h1>
-        <p>El token oficial de la comunidad Mew. Úsalo para transacciones, intercambios y más.</p>
-        <a href="#" class="button" onclick="addToMetaMask()">Agregar a MetaMask</a>
-        
-        <div class="links">
-            <p><strong>Enlaces útiles:</strong></p>
-            <a href="https://buidlbear.com/tx/0xd9145CCE52D386f254917e481eB44e9943F39138" target="_blank">Ver contrato</a>
-            <a href="https://twitter.com/MewToken" target="_blank">Twitter</a>
-            <a href="https://t.me/MewToken" target="_blank">Telegram</a>
-        </div>
+        <p>El token oficial inspirado en la energía y dulzura de Mew. ¡Úsalo para transacciones, intercambios y más!</p>
+        <button class="btn" onclick="addToMetaMask()">Agregar a MetaMask</button>
     </div>
     
     <script>
