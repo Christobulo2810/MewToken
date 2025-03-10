@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MewToken - Token Oficial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/Christobulo2810/MewToken/main/MewLogo.png" alt="MewToken Logo">
+        <h1>MewToken</h1>
+        <p>El token oficial de la comunidad Mew. Úsalo para transacciones, intercambios y más.</p>
+        <button onclick="addToMetaMask()">Agregar a MetaMask</button>
+    </div>
+    
+    <script>
+        function addToMetaMask() {
+            const tokenAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138"; // Reemplaza con la dirección real
+            const tokenSymbol = "MEW";
+            const tokenDecimals = 18;
+            
+            if (window.ethereum) {
+                window.ethereum.request({
+                    method: 'wallet_watchAsset',
+                    params: {
+                        type: 'ERC20',
+                        options: {
+                            address: tokenAddress,
+                            symbol: tokenSymbol,
+                            decimals: tokenDecimals,
+                            image: "https://raw.githubusercontent.com/Christobulo2810/MewToken/main/MewLogo.png"
+                        }
+                    }
+                }).then(success => {
+                    if (success) {
+                        alert('¡MewToken agregado a MetaMask!');
+                    } else {
+                        alert('Error al agregar el token.');
+                    }
+                });
+            } else {
+                alert('MetaMask no está instalado.');
+            }
+        }
+    </script>
+</body>
+</html>
