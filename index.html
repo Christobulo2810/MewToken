@@ -67,14 +67,36 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 40px;
+            transition: transform 0.3s ease;
+        }
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://raw.githubusercontent.com/Christobulo2810/MewToken/main/images/Mew_logo.png" alt="Mew Token Logo" class="logo">
+        <img src="images/mew_logo.png" alt="Mew Token Logo" class="logo">
         <h1>MewToken</h1>
         <p>El token oficial inspirado en la energía y dulzura de Mew. ¡Úsalo para transacciones, intercambios y más!</p>
         <button class="btn" onclick="addToMetaMask()">Agregar a MetaMask</button>
+        <div class="social-links">
+            <a href="https://twitter.com/MewToken" target="_blank">
+                <img src="images/twitter_icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.tiktok.com/@MewToken" target="_blank">
+                <img src="images/tiktok_icon.png" alt="TikTok">
+            </a>
+        </div>
     </div>
     
     <script>
