@@ -30,6 +30,11 @@
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .logo {
             width: 120px;
@@ -94,6 +99,13 @@
         .social-btn:hover {
             transform: scale(1.1);
         }
+        .roadmap {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -106,42 +118,13 @@
             <button class="social-btn twitter" onclick="window.open('https://x.com/Mew_Token', '_blank')">X</button>
             <button class="social-btn tiktok" onclick="window.open('https://www.tiktok.com/@mewtokenoficial', '_blank')">TikTok</button>
         </div>
+        <div class="roadmap">
+            <h2>📍 Roadmap</h2>
+            <p>✔️ Lanzamiento del token</p>
+            <p>✔️ Creación de la comunidad</p>
+            <p>🚀 Integración con DEX</p>
+            <p>🔮 Futuros desarrollos...</p>
+        </div>
     </div>
-    
-    <script>
-        function addToMetaMask() {
-            const tokenAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138"; // Reemplaza con la dirección real
-            const tokenSymbol = "MEW";
-            const tokenDecimals = 18;
-            
-            if (window.ethereum) {
-                window.ethereum.request({
-                    method: 'wallet_watchAsset',
-                    params: {
-                        type: 'ERC20',
-                        options: {
-                            address: tokenAddress,
-                            symbol: tokenSymbol,
-                            decimals: tokenDecimals,
-                            image: "images/Mew_logo.png"
-                        }
-                    }
-                }).then(success => {
-                    if (success) {
-                        alert('¡MewToken agregado a MetaMask!');
-                    } else {
-                        alert('Error al agregar el token.');
-                    }
-                });
-            } else {
-                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                if (isMobile) {
-                    window.location.href = "https://metamask.app.link/dapp/yourwebsite.com"; // Reemplaza con tu dominio
-                } else {
-                    alert('MetaMask no está instalado.');
-                }
-            }
-        }
-    </script>
 </body>
 </html>
