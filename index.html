@@ -3,116 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MewToken - Token Oficial</title>
+    <title>Mew Token - Token Revolucionario</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #f8a8ff, #d67aff, #a855f7, #6b21a8);
-            background-size: 400% 400%;
-            animation: gradientBG 8s ease infinite;
-            color: white;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        body {
+            background: linear-gradient(135deg, #f8a8ff, #d67aff, #a855f7, #6b21a8);
+            text-align: center;
+            color: white;
         }
         .container {
-            max-width: 600px;
+            max-width: 900px;
             margin: 50px auto;
-            background: rgba(255, 255, 255, 0.2);
             padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
         .logo {
-            width: 120px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            width: 150px;
+            margin: 10px auto;
         }
-        .cat-animation {
-            display: inline-block;
-            width: 120px;
-            height: 120px;
-            background: url('https://raw.githubusercontent.com/Christobulo2810/MewToken/main/MewTokenAnimated.gif') no-repeat center;
-            background-size: cover;
+        .title {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
         }
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
+        .description {
+            font-size: 1.2rem;
+            color: #f0f0f0;
             margin: 15px 0;
         }
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
         .btn {
+            display: inline-block;
             background: linear-gradient(90deg, #ff66c4, #ff33aa);
             color: white;
-            border: none;
             padding: 12px 25px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 10px;
-            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(255, 102, 196, 0.5);
-            animation: pulse 1.5s infinite;
         }
         .btn:hover {
-            background: linear-gradient(90deg, #ff33aa, #ff66c4);
             transform: scale(1.1);
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="cat-animation"></div>
-        <h1>MewToken</h1>
-        <p>El token oficial inspirado en la energía y dulzura de Mew. ¡Úsalo para transacciones, intercambios y más!</p>
-        <button class="btn" onclick="addToMetaMask()">Agregar a MetaMask</button>
+        <img class="cat-animation" src="/mnt/data/MewLogo.png" alt="Mew Token Logo">
+        <h1>Mew Token</h1>
+        <p class="description">El token mágico inspirado en el mítico Mew: un token para los soñadores, visionarios y amantes del misterio.</p>
+        <a href="#" class="btn">Comprar Mew Token</a>
     </div>
-    
-    <script>
-        function addToMetaMask() {
-            const tokenAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138"; // Reemplaza con la dirección real
-            const tokenSymbol = "MEW";
-            const tokenDecimals = 18;
-            
-            if (window.ethereum) {
-                window.ethereum.request({
-                    method: 'wallet_watchAsset',
-                    params: {
-                        type: 'ERC20',
-                        options: {
-                            address: tokenAddress,
-                            symbol: tokenSymbol,
-                            decimals: tokenDecimals,
-                            image: "https://raw.githubusercontent.com/Christobulo2810/MewToken/main/MewLogo.png"
-                        }
-                    }
-                }).then(success => {
-                    if (success) {
-                        alert('¡MewToken agregado a MetaMask!');
-                    } else {
-                        alert('Error al agregar el token.');
-                    }
-                });
-            } else {
-                alert('MetaMask no está instalado.');
-            }
-        }
-    </script>
 </body>
 </html>
