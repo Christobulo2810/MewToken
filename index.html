@@ -134,7 +134,12 @@
                     }
                 });
             } else {
-                alert('MetaMask no está instalado.');
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                if (isMobile) {
+                    window.location.href = "https://metamask.app.link/dapp/yourwebsite.com"; // Reemplaza con tu dominio
+                } else {
+                    alert('MetaMask no está instalado.');
+                }
             }
         }
     </script>
