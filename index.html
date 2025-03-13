@@ -70,16 +70,26 @@
         .social-links {
             margin-top: 20px;
         }
-        .social-links a {
-            margin: 0 10px;
+        .social-btn {
             display: inline-block;
+            background: linear-gradient(90deg, #1DA1F2, #0d8ecf);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(29, 161, 242, 0.5);
         }
-        .social-links img {
-            width: 40px;
-            transition: transform 0.3s ease;
+        .social-btn.tiktok {
+            background: linear-gradient(90deg, #000000, #ff0050);
+            box-shadow: 0 4px 10px rgba(255, 0, 80, 0.5);
         }
-        .social-links img:hover {
-            transform: scale(1.2);
+        .social-btn:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -90,12 +100,8 @@
         <p>El token oficial inspirado en la energía y dulzura de Mew. ¡Úsalo para transacciones, intercambios y más!</p>
         <button class="btn" onclick="addToMetaMask()">Agregar a MetaMask</button>
         <div class="social-links">
-            <a href="https://twitter.com/MewToken" target="_blank">
-                <img src="images/twitter_icon.png" alt="Twitter">
-            </a>
-            <a href="https://www.tiktok.com/@MewToken" target="_blank">
-                <img src="images/tiktok_icon.png" alt="TikTok">
-            </a>
+            <button class="social-btn" onclick="window.open('https://twitter.com/MewToken', '_blank')">Twitter</button>
+            <button class="social-btn tiktok" onclick="window.open('https://www.tiktok.com/@MewToken', '_blank')">TikTok</button>
         </div>
     </div>
     
