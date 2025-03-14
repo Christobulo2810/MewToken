@@ -12,7 +12,7 @@ contract MewToken is ERC20, Ownable, Pausable {
     event TokensMinted(address indexed to, uint256 amount);
 
     // Constructor: Inicializa el token con un nombre, símbolo y oferta inicial
-    constructor() ERC20("MewToken", "MEW") Ownable(msg.sender) {
+    constructor() ERC20("MewToken", "MEW") Ownable() {
         // No se mintean tokens al inicio, se usa la función mint() para distribuir según demanda // Minting de los tokens iniciales
     }
 
