@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fondo animado */
+body {
+  @apply bg-gradient-to-r from-purple-400 to-pink-500 text-white;
+  font-family: 'Arial', sans-serif;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Estilo del contenedor principal */
+.container {
+  @apply flex flex-col items-center justify-center min-h-screen text-center p-4;
+}
+
+/* Estilo del botón principal */
+.button {
+  @apply bg-white text-purple-600 px-6 py-3 rounded-full font-semibold mt-6 transition;
+}
+
+.button:hover {
+  @apply bg-gray-200 scale-105;
+}
+
+/* Animaciones de los iconos */
+.social-icons a {
+  @apply text-3xl mx-3 transition transform;
+}
+
+.social-icons a:hover {
+  @apply scale-110;
+}
+
+/* Ajuste de imágenes */
+.logo {
+  @apply w-40 h-40 mb-6;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
